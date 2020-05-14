@@ -47,7 +47,7 @@ public class ProductDao {
 		list.add(details2);
 		list.add(details3);
 		list.add(details4);
-
+// how
 	}
 
 	public static ProductDao getProductDao() {
