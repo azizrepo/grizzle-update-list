@@ -7,5 +7,12 @@ pipeline {
                 sh 'mvn --version'
             }
         }
+        
+          stage('Build Branch') {
+            steps {
+                echo 'build brabch scuccessfully'
+            }
+        }
+   
     }
 }
