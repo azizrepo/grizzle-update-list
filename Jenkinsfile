@@ -1,14 +1,41 @@
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
-    stages { 
-        
-       stage('Build Branch') {
+    agent any
+    stages {
+        stage('Compile Stage') {
             steps {
-                echo 'build brabch scuccessfully'
+                echo 'hello wolrd'
+                withMaven(maven:'maven'){
+                bat 'mvn clean compile'
+                }
+            }
+        
+        }
+        stage('Testing Stage') {
+            steps {
+                echo 'hello wolrd'
+                withMaven(maven:'maven'){
+                bat 'mvn test'
+                }
+            }
+        
+        }
+        
+        stage('Deployment Stage') {
+            steps {
+                echo 'hello wolrd'
+                withMaven(maven:'maven'){
+             //   bat 'mvn deploy'
+                 bat 'mvn install'
+               
+                }
+            }
+        
+        }
+        
+         stage('good bye') {
+            steps {
+                echo 'good bye'
             }
         }
-        stage('test') {
-            steps {
-                bat 'mvn --version'
-            }
-        }}}
+    }
+}
