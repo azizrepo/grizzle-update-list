@@ -19,7 +19,7 @@ pipeline {
     stages {
         stage('Compile Stage') {
             steps {
-                echo 'hello wolrd'
+                echo 'hello world'
                 withMaven(maven:'maven'){
                 bat 'mvn clean compile'
                 }
