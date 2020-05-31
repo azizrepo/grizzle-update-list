@@ -1,10 +1,11 @@
 package com.cognizant.grizzlestore.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class ProductBrand {
 	
 	
 	private int brandId;
-	
 	private String brandName;
 	
 	

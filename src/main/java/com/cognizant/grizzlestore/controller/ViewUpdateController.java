@@ -5,20 +5,24 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.cognizant.grizzlestore.model.LoginDetails;
 import com.cognizant.grizzlestore.model.ProductDetails;
 import com.cognizant.grizzlestore.service.GrizzleService;
 import com.cognizant.grizzlestore.service.IGrrizzleStore;
 import com.cogznizant.grizzlestore.exception.GrizzleException;
+
 
 @Controller
 public class ViewUpdateController {
@@ -92,17 +96,17 @@ public class ViewUpdateController {
 	}
 
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
-	public ModelAndView updateProduct(ProductDetails productDetails, ModelAndView modelAndView) {
-
-		// GrizzleService grizzleService=new GrizzleService();
-
+	public ModelAndView updateProduct(ModelAndView modelAndView,ProductDetails productDetails){
 		int count;
+		
 		try {
+			
+			
+
 			count = grizzleJpaService.updateProductDetails(productDetails);
 
 			if (count > 0) {
-				logger.info("controller updateProduct(){}  data is updated");
-
+				
 				// System.out.println("update");
 				modelAndView.setViewName("success");
 				modelAndView.addObject("message", "data is updated");

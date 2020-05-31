@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.cognizant.grizzlestore.dao.ProductDao;
-import com.cognizant.grizzlestore.model.LoginDetails;
 import com.cognizant.grizzlestore.model.ProductDetails;
 import com.cogznizant.grizzlestore.exception.GrizzleException;
 

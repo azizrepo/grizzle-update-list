@@ -1,8 +1,11 @@
 package com.cognizant.grizzlestore.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class ProductCategory {
-	
+	@NotEmpty
 	private int categoryId;
+	@NotEmpty
 	private String categoryName;
 	
 	public int getCategoryId() {

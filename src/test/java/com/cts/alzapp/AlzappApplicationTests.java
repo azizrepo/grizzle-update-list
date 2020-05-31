@@ -15,7 +15,6 @@ import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 
-import com.cognizant.grizzlestore.model.LoginDetails;
 import com.cognizant.grizzlestore.model.ProductBrand;
 import com.cognizant.grizzlestore.model.ProductCategory;
 import com.cognizant.grizzlestore.model.ProductDetails;

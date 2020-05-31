@@ -16,14 +16,15 @@
 <h1>All available products are</h1>
 <table border="1">
 <tr>
-<td>product id</td>
-<td>productName </td>
-<td>productPrice </td>
-<td>productDescription </td>
-<td>categoryId </td>
-<td>categoryName</td>
-<td>brandId</td>
-<td>brandName</td>
+<td>Product id</td>
+<td>ProductName </td>
+<td>ProductPrice </td>
+<td>ProductDescription </td>
+<td>CategoryId </td>
+<td>CategoryName</td>
+<td>BrandId</td>
+<td>BrandName</td>
+<td>Action</td>
 
 </tr>
 
