@@ -41,7 +41,7 @@ pipeline {
                 echo 'hello wolrd'
                 withMaven(maven:'maven'){
              //   bat 'mvn deploy'
-                 bat 'mvn install'
+                 bat 'mvn install -Dgithub.downloads=true'
                
                 }
             }
