@@ -24,6 +24,8 @@ pipeline {
                 bat 'docker images -a'
               //  bat 'cd target'
                 bat ' docker build -t jemkis-pipeline .'
+                bat ' docker push  aziznoori/alzap-store'
+
                 
         //        bat 'docker images -a'
                 
