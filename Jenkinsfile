@@ -1,36 +1,28 @@
 pipeline {
     agent any
     stages {
-        stage('Compile Stage') {
+        stage('Verify branch') {
             steps {
-                echo 'hello wolrd'
-                withMaven(maven:'maven'){
-                bat 'mvn clean compile'
-                }
-            }
-        
-        }
-        stage('Testing Stage') {
-            steps {
-                echo 'hello wolrd'
-                withMaven(maven:'maven'){
-                bat 'mvn test'
-                }
-            }
-        
-        }
-        
-        stage('Deployment Stage') {
-            steps {
-                echo 'hello wolrd'
-                withMaven(maven:'maven'){
-             //   bat 'mvn deploy'
-                 bat 'mvn install'
+                echo '$GIT_BRANCH'
                
                 }
             }
         
         }
+        stage('Docker Build') {
+            steps {
+                pwsh(script: 'docker images -a')
+                pwsh(script: ***
+                    docker images -a
+                     docker build -t jemkis-pipeline .
+                     docker images -a
+                    ***)
+                }
+            }
+        
+        }
+        
+        
         
          stage('good bye') {
             steps {
