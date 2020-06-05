@@ -7,7 +7,17 @@ pipeline {
                
                 }
             }
-        
+           stage('Deployment Stage') {
+            steps {
+                echo 'hello wolrd'
+                withMaven(maven:'maven'){
+             //   bat 'mvn deploy'
+                 bat 'mvn install'
+
+                }
+            }
+
+        }
         
         stage('Docker Build') {
             steps {
