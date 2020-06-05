@@ -22,6 +22,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 bat 'docker images -a'
+                bat 'cd target'
                 bat ' docker build -t jemkis-pipeline .'
                 
         //        bat 'docker images -a'
