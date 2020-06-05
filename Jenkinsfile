@@ -11,7 +11,8 @@ pipeline {
         
         stage('Docker Build') {
             steps {
-                pwsh(script: 'docker images -a')
+                bat 'docker images -a'
+             sh(script: 'docker images -a')
               /*  pwsh(script: ***
                     docker images -a
                      docker build -t jemkis-pipeline .
