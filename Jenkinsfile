@@ -65,7 +65,7 @@ pipeline {
      always {
        //     emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
      emailext(
-    to: 'somename@emailprovider.com',
+    to: 'maazizgulshan@gmail.com',
     body: '${DEFAULT_CONTENT}', 
     mimeType: 'text/html',
     subject: '${DEFAULT_SUBJECT}',
