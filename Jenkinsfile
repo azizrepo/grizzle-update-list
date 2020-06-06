@@ -55,9 +55,9 @@ pipeline {
             steps {
                 echo 'good bye'
         
-            emailext body: 'Check console output at $BUILD_URL to view the results.', 
-                    to: "${EMAIL_TO}", 
-                    subject: 'Jenkins build is back to normal: $PROJECT_NAME - #$BUILD_NUMBER'
+         //   emailext body: 'Check console output at $BUILD_URL to view the results.', 
+           //         to: "${EMAIL_TO}", 
+             //       subject: 'Jenkins build is back to normal: $PROJECT_NAME - #$BUILD_NUMBER'
             }
         }
     }
