@@ -36,6 +36,15 @@ pipeline {
                      docker images -a
                     ***)*/
                 }
+            
+            post{
+                success{
+                echo 'Build deploy in docker hub is scuccessfully done'
+                }
+                failure{
+                    echo 'Build Failure '
+                }
+            }
             }
         
         
